@@ -16,7 +16,10 @@ router.post("/create_post", async (req, res) => {
 //get all posts
 router.get("/", async (req, res) => {
   try {
-    const posts = await Post.find().lean();
+    const posts = await Post
+      .find()
+      .sort({ createdAt: -1 })
+      .lean();
     res.status(200).json(posts);
   } catch (error) {
     res.status(500).json(error);
