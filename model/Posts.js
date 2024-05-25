@@ -7,7 +7,14 @@ const PostSchema = new Schema({
   sypnosis: String,
   content: [String],
   tags: [String],
-  images: [ImageSchema],
+  images: [
+    {
+      url: String,
+      filename: String,
+      caption: String,
+      altTest: String
+    }
+  ],
 }, { timestamps: true });
 
 module.exports = mongoose.model("Posts", PostSchema);
