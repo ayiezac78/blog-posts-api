@@ -10,7 +10,6 @@ const PostSchema = new Schema({
   images: [
     {
       url: String,
-      filename: String,
       caption: String,
       altTest: String
     }
