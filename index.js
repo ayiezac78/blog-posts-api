@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 })();
 
 app.use("/api/posts", require("./routes/posts"));
-app.use("/", require("./routes/content"));
+app.use("/api/blog-posts", require("./routes/content"));
 
 
 const PORT = process.env.PORT || 5000;
